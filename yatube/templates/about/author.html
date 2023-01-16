@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block title %}Об авторе проекта{% endblock %}
+{% block content %}
+{% load static %}
+<div class="border-top text-center py-3">
+  <h1>Yatube.ru</h1>
+  <h6>Платформа для блогов своими руками</h6>
+</div>
+<div class="col-md-12 p-3">
+    <h3>Об авторе:</h3>
+      <p>
+        Меня зовут Олег, и я сделал страницы этого сайта, выполняя задания на курсе
+        Python-разработчик от Яндекс.Практикума.
+        Мне предстоит еще многое сделать, но я уверен, что вы уже можете
+        прочитать новые записи групп и посмотреть последние
+        обновления на сайте. Тем временем буду продолжать улучшать сайт
+        чтобы вы могли проводить время здесь с еще большим удовольствием!
+      </p>
+</div>
+<div class="col-md-4 p-3">
+    <h3>Контакты:</h3>
+    <ul>
+        <li>
+          <a href="https://vk.com/oleg_snap"> ВКонтакте </a>
+        </li>
+        <li>
+          <a href="https://github.com/Olegsnap"> GitHub </a>
+        </li>
+        <li>
+          <h6> <span style="color:green">W/A:</span> 89185655899 </h6>
+        </li>
+    </ul>
+</div>
+  <div class="col-md-6 p-3">
+    <h3>Extra:</h3>
+      <h6> Использованные технологии -
+        <a href="{% url 'about:tech' %}">  здесь </a>
+      </h6>
+        Обновлено 13.12.2022
+    <p>
+        Работаем для вас!
+    </P>
+    <img src="{% static 'img/picture.jpg' %}" width="330" height="150"> </img>
+</div>
+<div class="border-top text-center">
+    <a href="{% url 'posts:index' %}"> на главную </a>
+</div>
+{% endblock %}

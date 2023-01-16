@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block title %}Технологии{% endblock %}
+{% block content %}
+<div class="border-top text-center py-3">
+  <h3>Powered by Django 2.2.19.</h3>
+</div>
+<div class="p-3">
+  <h3>Specs:</h3>
+  <aside class="col-9 col-md-3">
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">
+        Python
+          <ol>
+            <li>
+              shell
+            </li>
+            <li>
+              class Meta
+            </li>
+            <li>
+              @wraps by functools
+            </li>
+          </ol>
+      </li>
+      <li class="list-group-item">
+        Django
+        <ol>
+          <li>
+            ORM, CRUD
+          </li>
+          <li>
+            Generic Views
+          </li>
+          <li>
+            Методы валидации
+          </li>
+        </ol>
+      </li>
+      <li class="list-group-item">
+        HTML
+        <ol>
+          <li>
+            CSS, bootstrap, tags
+          </li>
+        </ol>
+      </li>
+    </ul>
+  </aside>
+<p>
+  В процессе работы с сайтом были изучены и применены возможности Django.
+  Для начала такие как маршрутизация и представления для работы с ними.
+  Были созданы модели, осуществлены миграции, переработаны с использованием тегов
+  шаблоны HTML. Также изучены принципы фильтрации, выборки данных, основы Django ORM.
+  Использованы встроенные сценарии для управления пользователями и системой авторазации.
+  Разработаны формы для входа на сайт, создания пользователя, восстановления пароля
+  (в том числе и по email). Создано приложение для хранения фильтров шаблонов.
+  В качестве дополнительного компонента внедрен Paginator - для постраничного
+  вывода информации на главных страницах сайта.
+</p>
+</div>
+<div class="border-top text-center">
+  <a href="{% url 'posts:index' %}"> на главную </a>
+</div>
+{% endblock %}
