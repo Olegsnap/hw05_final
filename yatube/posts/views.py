@@ -38,11 +38,10 @@ def profile(request, username):
     if following:
         following = author.following.filter(user=request.user).exists()
     return render(request, 'posts/profile.html',
-                  {
-                    'author': author,
-                    'page_obj': page_obj,
-                    'following': following
-                    }
+                  {'author': author,
+                   'page_obj': page_obj,
+                   'following': following
+                   }
                   )
 
 
