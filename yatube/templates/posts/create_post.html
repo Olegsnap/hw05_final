@@ -13,20 +13,28 @@
                 {% endif %}          
               </div>
               <div class="card-body">        
-                {% include 'includes/form.html'  %}
-                  <div class="d-flex justify-content-end">
-                    <button type="submit" class="btn btn-primary">
-                      {% if is_edit %}
-                        Сохранить
-                      {% else %}
-                        Добавить
-                      {% endif %}
-                    </button>
-                  </div>
+                <form method="post" 
+                  enctype="multipart/form-data"
+                  {% if action_url %}
+                  action="{% url action_url %}"
+                  {% endif %}
+                >
+                {% csrf_token %}
+                {% include 'includes/form_error.html' %}
+                {% include 'includes/form_field.html' %}
+                <div class="d-flex justify-content-end">
+                  <button type="submit" class="btn btn-primary">
+                    {% if is_edit %}
+                      Сохранить
+                    {% else %}
+                      Добавить
+                    {% endif %}
+                  </button>
+                </div>
                 </form>
               </div>
             </div>
           </div>
         </div>
       </div>
-{% endblock %} 
+{% endblock %}

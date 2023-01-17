@@ -50,9 +50,9 @@ class Post(models.Model):
         verbose_name='Группа'
     )
     image = models.ImageField(
-        'Картинка',
         upload_to='posts/',
         blank=True,
+        verbose_name='Картинка',
         help_text='Выберите изображение'
     )
 
