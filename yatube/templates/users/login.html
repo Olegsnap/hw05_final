@@ -2,6 +2,7 @@
 {% block title %}Войти{% endblock %}
 {% block content %}
 {% load user_filters %}
+<div class="container py-5">
   <div class="row justify-content-center">
     <div class="col-md-8 p-5">
       <div class="card">
@@ -9,7 +10,7 @@
           Войти на сайт
         </div>
         <div class="card-body">
-          <form method="post" 
+          <form method="post"
             enctype="multipart/form-data"
             {% if action_url %}
             action="{% url action_url %}"
@@ -28,7 +29,8 @@
           </div>
           </form>
         </div>
-      </div> 
-    </div> 
-</div> 
-{% endblock %} 
+      </div>
+    </div>
+</div>
+</div>
+{% endblock %}
