@@ -47,4 +47,4 @@ python manage.py test
 python manage.py test posts.tests.test_views
 ```
 
-## Автор: Олег Асташкин 
+## Автор: Олег Асташкин &#128040;
